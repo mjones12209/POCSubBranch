@@ -17,4 +17,4 @@ jobs:
 
     steps:
     - name: Rebase Master To Children
-      run: ls
+      run: dir
