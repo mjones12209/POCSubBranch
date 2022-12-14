@@ -18,4 +18,5 @@ jobs:
 
     steps:
     - name: Rebase Master To Children
-      run: ${GITHUB_WORKSPACE}/scripts/update_children_branches.sh
+      working-directory: scripts
+      run: bash ./update_children_branches.sh
