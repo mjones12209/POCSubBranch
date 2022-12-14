@@ -2,7 +2,7 @@ import React from 'react'
 
 const testFile = () => {
   return (
-    <div>testFile</div>
+    <div>testFile - with more text</div>
   )
 }
 
