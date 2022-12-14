@@ -1,9 +1,10 @@
 name: Automerge
 
-on:
-  pull_request:
-    types:
-      - closed
+# on:
+#   pull_request:
+#     types:
+#       - closed
+on: [push]
 
 # env:
   # replace "github_username" with your GitHub username
@@ -17,4 +18,4 @@ jobs:
 
     steps:
     - name: Rebase Master To Children
-      run: dir
+      run: dirp
