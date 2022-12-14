@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #define children branch names
-CHILDREN_BRANCHES=('a' 'b')
+CHILDREN_BRANCHES=('c' 'd')
 
 
 #basic setup for git with bot naming
@@ -17,6 +17,7 @@ git config pull.rebase false
 for i in ${CHILDREN_BRANCHES[@]};
 do
     git checkout $i
-    git merge main
-    git push $i
+    git rebase main
+    git push --force-with-lease
+    git checkout main
 done
