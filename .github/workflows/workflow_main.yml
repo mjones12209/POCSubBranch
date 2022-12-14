@@ -18,4 +18,4 @@ jobs:
 
     steps:
     - name: Rebase Master To Children
-      run: dirp
+      run: dir
