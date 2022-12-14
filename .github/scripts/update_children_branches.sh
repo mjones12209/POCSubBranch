@@ -17,5 +17,5 @@ git config pull.rebase false
 for i in ${CHILDREN_BRANCHES[@]};
 do
     git checkout $i
-    git merge master
+    git merge main
 done
