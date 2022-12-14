@@ -18,4 +18,5 @@ for i in ${CHILDREN_BRANCHES[@]};
 do
     git checkout origin/$i
     git merge main
+    git push
 done
