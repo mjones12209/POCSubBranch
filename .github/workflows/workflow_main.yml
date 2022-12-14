@@ -18,5 +18,6 @@ jobs:
 
     steps:
     - name: Rebase Master To Children
+      uses: actions/checkout@v2.3.4
       working-directory: scripts
       run: bash ./update_children_branches.sh
