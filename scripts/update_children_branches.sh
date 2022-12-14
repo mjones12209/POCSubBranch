@@ -16,5 +16,6 @@ git config pull.rebase false
 #loop through the children branches and merge with master
 for i in ${CHILDREN_BRANCHES[@]};
 do
-    git branch -r
+    git checkout origin/$i
+    git merge main
 done
