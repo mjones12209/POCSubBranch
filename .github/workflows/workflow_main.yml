@@ -17,7 +17,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Rebase Master To Children
+    - name: checkout repo
       uses: actions/checkout@v2.3.4
+    - name: run script
       working-directory: scripts
       run: bash ./update_children_branches.sh
