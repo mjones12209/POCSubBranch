@@ -17,4 +17,4 @@ jobs:
 
     steps:
     - name: Rebase Master To Children
-      run: pwd
+      run: bash /home/runner/work/POCSubBranch/POCSubBranch/.github/scripts/update_children_branches.sh
