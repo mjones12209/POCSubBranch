@@ -19,4 +19,4 @@ jobs:
         fetch-depth: '0'
     - name: run script
       working-directory: scripts
-      run: bash ./update_children_branches.sh
+      run: bash ./update_children_branches-dev.sh
