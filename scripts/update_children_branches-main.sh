@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #define children branch names
-CHILDREN_BRANCHES=('e' 'f')
+CHILDREN_BRANCHES=('e-main' 'f-main')
 
 
 #basic setup for git with bot naming

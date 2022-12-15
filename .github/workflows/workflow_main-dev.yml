@@ -1,0 +1,22 @@
+name: Autorebase
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches: 
+      - "dev"
+
+jobs:
+  merge:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v3
+      with: 
+        fetch-depth: '0'
+    - name: run script
+      working-directory: scripts
+      run: bash ./update_children_branches.sh
