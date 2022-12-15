@@ -1,19 +1,16 @@
-name: Automerge
+name: Autorebase
 
-# on:
-#   pull_request:
-#     types:
-#       - closed
-on: [push]
-
-# env:
-  # replace "github_username" with your GitHub username
-  # replace "github.com/username/repo.git" with your GitHub repo path
-  # do NOT replace ${{secrets.GITHUB_TOKEN}}, GitHub will take care of it
-  # MY_REPO: https://github_username:${{secrets.GITHUB_TOKEN}}@github.com:mjones12209/POCSubBranch.git
+on:
+  pull_request:
+    types:
+      - closed
+    branches: 
+      - "main"
+      - "dev"
 
 jobs:
   merge:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
