@@ -5,6 +5,7 @@ const testFile = () => {
     <>
       <div>testFile - with more text -- and added more text</div>
       <div>another div</div>
+      <div>replication test</div>
     </>
   )
 }
