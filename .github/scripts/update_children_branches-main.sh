@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #define children branch names
-CHILDREN_BRANCHES=('e-dev' 'f-dev')
+PARENT_BRANCH='main'
+CHILDREN_BRANCHES=('e-main' 'f-main')
 
 
 #basic setup for git with bot naming
@@ -12,7 +13,7 @@ git config user.email "bot@example.com"
 for i in ${CHILDREN_BRANCHES[@]};
 do
     git checkout $i
-    git rebase main
+    git rebase $PARENT_BRANCH
     git push --force-with-lease
-    git checkout main
+    git checkout $PARENT_BRANCH
 done

@@ -18,5 +18,5 @@ jobs:
       with: 
         fetch-depth: '0'
     - name: run script
-      working-directory: scripts
+      working-directory: .github/scripts
       run: bash ./update_children_branches-dev.sh
